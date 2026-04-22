@@ -3,7 +3,7 @@ name: Steam Playtime Monitor
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 * * * *"
+    - cron: "30 * * * *"
       timezone: "Asia/Shanghai"
 
 permissions:
