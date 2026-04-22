@@ -38,6 +38,11 @@ class GameSnapshot:
     total_hours_on_record: str | None
 
 
+def env_or_default(name: str, default: str) -> str:
+    value = os.environ.get(name, "").strip()
+    return value or default
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
@@ -46,7 +51,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--profile-xml-url",
-        default=os.environ.get("STEAM_PROFILE_XML_URL", DEFAULT_PROFILE_XML_URL),
+        default=env_or_default("STEAM_PROFILE_XML_URL", DEFAULT_PROFILE_XML_URL),
         help="Steam 公开 XML 地址，可由环境变量 STEAM_PROFILE_XML_URL 覆盖。",
     )
     parser.add_argument(
