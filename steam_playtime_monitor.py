@@ -17,6 +17,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 from pathlib import Path
 from typing import Any
@@ -27,6 +28,8 @@ DEFAULT_BARK_BASE_URL = os.environ.get("BARK_BASE_URL", "")
 DEFAULT_STATE_FILE = Path(__file__).resolve().parent / "data" / "steam_recent_playtime_state.json"
 DEFAULT_TIMEOUT = 15.0
 USER_AGENT = "steam-playtime-monitor/1.0"
+DISPLAY_TIMEZONE = ZoneInfo("Asia/Shanghai")
+DISPLAY_TIME_FORMAT = "%Y-%m-%d %H:%M"
 
 
 @dataclass
@@ -177,6 +180,41 @@ def format_minutes(minutes: int) -> str:
     return "".join(parts)
 
 
+def parse_snapshot_datetime(snapshot: dict[str, Any] | None) -> datetime | None:
+    if not snapshot:
+        return None
+    fetched_at = str(snapshot.get("fetched_at_utc", "")).strip()
+    if not fetched_at:
+        return None
+    try:
+        return datetime.fromisoformat(fetched_at)
+    except ValueError:
+        return None
+
+
+def format_hours_delta(minutes: int) -> str:
+    hours_value = (Decimal(minutes) / Decimal("60")).quantize(
+        Decimal("0.1"), rounding=ROUND_HALF_UP
+    )
+    hours_text = format(hours_value.normalize(), "f")
+    if "." in hours_text:
+        hours_text = hours_text.rstrip("0").rstrip(".")
+    return f"{hours_text}小时"
+
+
+def format_capture_range(
+    previous_snapshot: dict[str, Any] | None, current_snapshot: dict[str, Any]
+) -> str:
+    previous_dt = parse_snapshot_datetime(previous_snapshot)
+    current_dt = parse_snapshot_datetime(current_snapshot)
+    if previous_dt is None or current_dt is None:
+        return "上次抓取时间-现在"
+
+    previous_text = previous_dt.astimezone(DISPLAY_TIMEZONE).strftime(DISPLAY_TIME_FORMAT)
+    current_text = current_dt.astimezone(DISPLAY_TIMEZONE).strftime(DISPLAY_TIME_FORMAT)
+    return f"{previous_text}-{current_text}"
+
+
 def detect_growth(
     previous_snapshot: dict[str, Any] | None, current_snapshot: dict[str, Any]
 ) -> list[dict[str, Any]]:
@@ -213,21 +251,17 @@ def detect_growth(
 
 
 def build_push_message(
-    current_snapshot: dict[str, Any], growth_items: list[dict[str, Any]]
+    previous_snapshot: dict[str, Any] | None,
+    current_snapshot: dict[str, Any],
+    growth_items: list[dict[str, Any]],
 ) -> tuple[str, str]:
-    total_delta = sum(item["delta_minutes"] for item in growth_items)
-    title = f"Steam 时长增长 {format_minutes(total_delta)}"
     profile_name = current_snapshot.get("steam_name") or current_snapshot.get("steam_id64") or "Steam 账号"
-    lines = [f"{profile_name} 检测到以下增长:"]
-    for item in growth_items:
-        lines.append(
-            (
-                f"{item['name']} +{format_minutes(item['delta_minutes'])} "
-                f"(近2周 {format_minutes(item['previous_minutes'])} -> "
-                f"{format_minutes(item['current_minutes'])})"
-            )
-        )
-    lines.append("数据源来自公开 XML，粒度为 0.1 小时，约等于 6 分钟。")
+    capture_range = format_capture_range(previous_snapshot, current_snapshot)
+    title = f"{profile_name} 游戏时长增长"
+    lines = [
+        f"{profile_name} {item['name']} {capture_range} 游戏时长增加 {format_hours_delta(item['delta_minutes'])}"
+        for item in growth_items
+    ]
     body = "\n".join(lines)
     return title, body
 
@@ -295,7 +329,7 @@ def main() -> int:
         print("最近游戏时长没有增长，本次不推送。")
         return 0
 
-    title, body = build_push_message(current_snapshot, growth_items)
+    title, body = build_push_message(previous_snapshot, current_snapshot, growth_items)
     print("检测到增长:")
     print(body)
 
