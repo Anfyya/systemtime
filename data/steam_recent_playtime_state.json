@@ -2,7 +2,7 @@
   "steam_id64": "76561198839776064",
   "steam_name": "百日萌新",
   "profile_xml_url": "https://steamcommunity.com/profiles/76561198839776064/?xml=1",
-  "fetched_at_utc": "2026-04-24T05:36:17.099613+00:00",
+  "fetched_at_utc": "2026-04-24T08:05:21.081152+00:00",
   "games": {
     "2868840": {
       "app_id": "2868840",
@@ -24,6 +24,13 @@
       "recent_hours": "10.4",
       "recent_minutes": 624,
       "total_hours_on_record": "562"
+    },
+    "2840470": {
+      "app_id": "2840470",
+      "name": "SimplePlanes 2",
+      "recent_hours": "0.9",
+      "recent_minutes": 54,
+      "total_hours_on_record": "0.9"
     },
     "397340": {
       "app_id": "397340",
