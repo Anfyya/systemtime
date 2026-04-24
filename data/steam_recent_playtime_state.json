@@ -2,7 +2,7 @@
   "steam_id64": "76561198839776064",
   "steam_name": "百日萌新",
   "profile_xml_url": "https://steamcommunity.com/profiles/76561198839776064/?xml=1",
-  "fetched_at_utc": "2026-04-24T13:25:35.397989+00:00",
+  "fetched_at_utc": "2026-04-24T14:53:44.637461+00:00",
   "games": {
     "2868840": {
       "app_id": "2868840",
@@ -21,9 +21,16 @@
     "1172470": {
       "app_id": "1172470",
       "name": "Apex Legends",
-      "recent_hours": "8.7",
-      "recent_minutes": 522,
+      "recent_hours": "7.9",
+      "recent_minutes": 474,
       "total_hours_on_record": "562"
+    },
+    "2840470": {
+      "app_id": "2840470",
+      "name": "SimplePlanes 2",
+      "recent_hours": "2.0",
+      "recent_minutes": 120,
+      "total_hours_on_record": "2.0"
     },
     "397340": {
       "app_id": "397340",
@@ -31,13 +38,6 @@
       "recent_hours": "1.6",
       "recent_minutes": 96,
       "total_hours_on_record": "14.7"
-    },
-    "2840470": {
-      "app_id": "2840470",
-      "name": "SimplePlanes 2",
-      "recent_hours": "0.9",
-      "recent_minutes": 54,
-      "total_hours_on_record": "0.9"
     }
   }
 }
