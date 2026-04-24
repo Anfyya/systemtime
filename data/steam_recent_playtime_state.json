@@ -2,14 +2,14 @@
   "steam_id64": "76561198839776064",
   "steam_name": "百日萌新",
   "profile_xml_url": "https://steamcommunity.com/profiles/76561198839776064/?xml=1",
-  "fetched_at_utc": "2026-04-24T08:05:21.081152+00:00",
+  "fetched_at_utc": "2026-04-24T10:04:48.452408+00:00",
   "games": {
     "2868840": {
       "app_id": "2868840",
       "name": "Slay the Spire 2",
-      "recent_hours": "33.1",
-      "recent_minutes": 1986,
-      "total_hours_on_record": "102"
+      "recent_hours": "33.7",
+      "recent_minutes": 2022,
+      "total_hours_on_record": "103"
     },
     "730": {
       "app_id": "730",
@@ -25,19 +25,19 @@
       "recent_minutes": 624,
       "total_hours_on_record": "562"
     },
+    "397340": {
+      "app_id": "397340",
+      "name": "SimplePlanes",
+      "recent_hours": "1.4",
+      "recent_minutes": 84,
+      "total_hours_on_record": "14.6"
+    },
     "2840470": {
       "app_id": "2840470",
       "name": "SimplePlanes 2",
       "recent_hours": "0.9",
       "recent_minutes": 54,
       "total_hours_on_record": "0.9"
-    },
-    "397340": {
-      "app_id": "397340",
-      "name": "SimplePlanes",
-      "recent_hours": "0.9",
-      "recent_minutes": 54,
-      "total_hours_on_record": "14.0"
     }
   }
 }
