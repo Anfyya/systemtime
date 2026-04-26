@@ -2,7 +2,7 @@
   "steam_id64": "76561198839776064",
   "steam_name": "百日萌新",
   "profile_xml_url": "https://steamcommunity.com/profiles/76561198839776064/?xml=1",
-  "fetched_at_utc": "2026-04-26T09:30:21.194956+00:00",
+  "fetched_at_utc": "2026-04-26T10:45:50.040222+00:00",
   "games": {
     "2868840": {
       "app_id": "2868840",
@@ -21,8 +21,8 @@
     "1172470": {
       "app_id": "1172470",
       "name": "Apex Legends",
-      "recent_hours": "7.6",
-      "recent_minutes": 456,
+      "recent_hours": "6.8",
+      "recent_minutes": 408,
       "total_hours_on_record": "562"
     },
     "2840470": {
