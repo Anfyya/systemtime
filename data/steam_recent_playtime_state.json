@@ -2,28 +2,28 @@
   "steam_id64": "76561198839776064",
   "steam_name": "百日萌新",
   "profile_xml_url": "https://steamcommunity.com/profiles/76561198839776064/?xml=1",
-  "fetched_at_utc": "2026-04-27T11:44:00.153369+00:00",
+  "fetched_at_utc": "2026-04-27T13:55:12.098445+00:00",
   "games": {
     "2868840": {
       "app_id": "2868840",
       "name": "Slay the Spire 2",
-      "recent_hours": "35.9",
-      "recent_minutes": 2154,
+      "recent_hours": "35.1",
+      "recent_minutes": 2106,
       "total_hours_on_record": "110"
     },
     "730": {
       "app_id": "730",
       "name": "Counter-Strike 2",
-      "recent_hours": "15.7",
-      "recent_minutes": 942,
+      "recent_hours": "14.7",
+      "recent_minutes": 882,
       "total_hours_on_record": "744"
     },
     "1172470": {
       "app_id": "1172470",
       "name": "Apex Legends",
-      "recent_hours": "7.4",
-      "recent_minutes": 444,
-      "total_hours_on_record": "564"
+      "recent_hours": "8.4",
+      "recent_minutes": 504,
+      "total_hours_on_record": "565"
     },
     "2840470": {
       "app_id": "2840470",
