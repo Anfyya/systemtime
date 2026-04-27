@@ -2,35 +2,35 @@
   "steam_id64": "76561198839776064",
   "steam_name": "百日萌新",
   "profile_xml_url": "https://steamcommunity.com/profiles/76561198839776064/?xml=1",
-  "fetched_at_utc": "2026-04-27T04:07:07.312430+00:00",
+  "fetched_at_utc": "2026-04-27T07:14:35.231546+00:00",
   "games": {
     "2868840": {
       "app_id": "2868840",
       "name": "Slay the Spire 2",
-      "recent_hours": "37.2",
-      "recent_minutes": 2232,
-      "total_hours_on_record": "108"
+      "recent_hours": "38.3",
+      "recent_minutes": 2298,
+      "total_hours_on_record": "110"
     },
     "730": {
       "app_id": "730",
       "name": "Counter-Strike 2",
-      "recent_hours": "16.3",
-      "recent_minutes": 978,
+      "recent_hours": "15.7",
+      "recent_minutes": 942,
       "total_hours_on_record": "744"
     },
     "1172470": {
       "app_id": "1172470",
       "name": "Apex Legends",
-      "recent_hours": "7.9",
-      "recent_minutes": 474,
+      "recent_hours": "7.3",
+      "recent_minutes": 438,
       "total_hours_on_record": "564"
     },
     "2840470": {
       "app_id": "2840470",
       "name": "SimplePlanes 2",
-      "recent_hours": "3.6",
-      "recent_minutes": 216,
-      "total_hours_on_record": "3.6"
+      "recent_hours": "3.7",
+      "recent_minutes": 222,
+      "total_hours_on_record": "3.7"
     },
     "397340": {
       "app_id": "397340",
