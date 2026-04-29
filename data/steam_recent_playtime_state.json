@@ -2,7 +2,7 @@
   "steam_id64": "76561198839776064",
   "steam_name": "百日萌新",
   "profile_xml_url": "https://steamcommunity.com/profiles/76561198839776064/?xml=1",
-  "fetched_at_utc": "2026-04-29T03:24:04.980328+00:00",
+  "fetched_at_utc": "2026-04-29T06:11:28.379136+00:00",
   "games": {
     "2868840": {
       "app_id": "2868840",
@@ -21,8 +21,8 @@
     "730": {
       "app_id": "730",
       "name": "Counter-Strike 2",
-      "recent_hours": "11.3",
-      "recent_minutes": 678,
+      "recent_hours": "10.7",
+      "recent_minutes": 642,
       "total_hours_on_record": "744"
     },
     "2840470": {
