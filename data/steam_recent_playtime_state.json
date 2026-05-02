@@ -2,13 +2,13 @@
   "steam_id64": "76561198839776064",
   "steam_name": "百日萌新",
   "profile_xml_url": "https://steamcommunity.com/profiles/76561198839776064/?xml=1",
-  "fetched_at_utc": "2026-05-02T10:59:04.810789+00:00",
+  "fetched_at_utc": "2026-05-02T11:53:59.018162+00:00",
   "games": {
     "2868840": {
       "app_id": "2868840",
       "name": "Slay the Spire 2",
-      "recent_hours": "24.6",
-      "recent_minutes": 1476,
+      "recent_hours": "23.7",
+      "recent_minutes": 1422,
       "total_hours_on_record": "110"
     },
     "1172470": {
