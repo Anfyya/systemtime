@@ -2,7 +2,7 @@
   "steam_id64": "76561198839776064",
   "steam_name": "百日萌新",
   "profile_xml_url": "https://steamcommunity.com/profiles/76561198839776064/?xml=1",
-  "fetched_at_utc": "2026-05-04T13:07:40.877843+00:00",
+  "fetched_at_utc": "2026-05-04T15:30:12.439670+00:00",
   "games": {
     "2868840": {
       "app_id": "2868840",
@@ -21,8 +21,8 @@
     "730": {
       "app_id": "730",
       "name": "Counter-Strike 2",
-      "recent_hours": "5.1",
-      "recent_minutes": 306,
+      "recent_hours": "4.6",
+      "recent_minutes": 276,
       "total_hours_on_record": "744"
     },
     "2840470": {
@@ -35,8 +35,8 @@
     "397340": {
       "app_id": "397340",
       "name": "SimplePlanes",
-      "recent_hours": "1.6",
-      "recent_minutes": 96,
+      "recent_hours": "0.7",
+      "recent_minutes": 42,
       "total_hours_on_record": "14.7"
     }
   }
