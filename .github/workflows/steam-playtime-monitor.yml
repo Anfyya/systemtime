@@ -1,6 +1,6 @@
 name: Steam Playtime Monitor
 
-on:
+#on:
   workflow_dispatch:
   schedule:
     - cron: "*/30 * * * *"
